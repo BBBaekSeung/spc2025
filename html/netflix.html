@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Netflix</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('background.jpg');
+            background-size: cover;  
+            background-position: center; 
+            color: white; 
+            text-align: center; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav {
+            height: 63px; 
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 0 20px; 
+        }
+        .nav-right {
+            display: flex;
+            margin-left: auto;
+         }
+
+        .logo {
+            font-size: 50px;
+            font-weight: bold;
+            color: red;
+        }
+        .lang {
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 4px;
+        }
+
+        .login {
+            padding: 8px;
+            background-color: red;
+            color: white;
+            border-radius: 4px;
+            text-align: center;
+            transition: background-color 0.3s; 
+        }
+
+        .login:hover {
+            background-color: darkred; 
+        }
+
+        .content {
+            margin-top: 80px;
+        }
+        .content h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .firstline{
+        font-size: 20px;
+        margin-bottom:25px;
+        }
+        .secondline {
+        font-size: 17px;
+        }
+
+        .email {
+            display: flex;
+            align-items: center;
+        }
+
+        .mailbox {
+            font-size: 20px;
+            width: 400px;
+            padding: 15px;
+            border: 1px solid gray;
+            margin-right: 15px;
+            text-align: left;
+        }
+
+        .start {
+            font-size: 25px;
+            padding: 15px;
+            background-color: red;
+            color: white;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .start:hover {
+            background-color: darkred; 
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">Netflix</div>
+        <div class="nav-right">
+            <div class="lang">한국어</div>
+            <a class="login">로그인</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>영화, 시리즈 등을 무제한으로.</h1>
+        <p class="firstline">5,500원으로 시작하세요. 멤버십은 언제든지 해지 가능합니다.</p>
+        <p class="secondline">시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</p>
+    </div>
+    
+
+    <div class="email">
+        <div class="mailbox">이메일 주소</div>
+        <div class="start">시작하기⠀⠀></div>
+    </div>
+</body>
+</html>
+
