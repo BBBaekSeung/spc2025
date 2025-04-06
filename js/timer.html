@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #progressBar {
+            width: 100%;
+            background-color: #c4c4c4;
+        }
+        #progress {
+            width: 0%;
+            height: 30px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>프로그레스바(타이머)</h1>
+    <input type="number" id="timeInput" placeholder="초 입력" min=1>
+    <button id="startButton" onclick="startProgress()">시작</button>
+    <button id="resetButton">reset</button>
+
+    <div id="progressBar">
+        <div id="progress"></div>
+    </div>
+    <script>
+        const timeInput = document.getElementById('timeInput');
+        const progressBar = document.getElementById('progress');
+
+        let duration = 0; 
+
+        function startProgress() {
+            duration = Number(timeInput.value);
+
+            let timePassed = 0; 
+            interval = setInterval(function() { 
+                timePassed++; 
+
+                let progress = (timePassed / duration) * 100; 
+
+                // progressBar.style.width = progress + "%"; // 진행율 업데이트
+                progressBar.style.width = `${progress}%`; 
+
+                if (timePassed >= duration) {
+                    clearInterval(interval); // 타이머 삭제
+                    console.log("타이머 삭제중!!", interval);
+                }
+            }, 1000);
+
+            resetButton.addEventListener('click', function () {
+            clearInterval(interval);
+            progressBar.style.width = "0%"; // 초기화
+        });
+
+        }
+
+    </script>
+</body>
+</html>
